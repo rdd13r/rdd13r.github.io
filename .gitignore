@@ -1,0 +1,25 @@
+#### rdd13r altered
+### JetBrains template
+.idea
+
+### Linux template
+*~
+.Trash-*
+
+### Diff template
+*.patch
+*.diff
+
+### Vim template
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+tags
+[._]*.un~
+
+### macOS template
+.DS_Store
+Icon
+._*
