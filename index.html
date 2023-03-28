@@ -5,7 +5,8 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Vadim Kuhay, aka R!dd13r(rdd13r)</title>
+    <title>R!dd13r(rdd13r)</title>
+    <meta name="robots" content="noindex">
     <meta name="description" content="Landing for rdd13r's welcome site">
     <meta name="author" content="rdd13r">
 
@@ -19,16 +20,12 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/rdd13r.css">
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-color: black;
-        }
 
         .bg {
             background-size: cover;
@@ -42,24 +39,15 @@
             vertical-align: middle;
         }
 
-        .inner {
-            position: relative;
-            top: 41%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: "freight-big-pro",serif;
-            font-size: 44px;
-            max-width: 80%;
-            text-rendering: optimizeLegibility;
-        }
-        a { display: block; width: 100%; height: 100%; }
-
     </style>
     <script type="text/javascript" src="//use.typekit.net/nxs1qix.js"></script>
     <script type="text/javascript">try {
         Typekit.load();
     } catch (e) {
     }</script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.webticker.min.js"></script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -69,7 +57,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT5NJ86878"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-FT5NJ86878');
@@ -91,7 +83,339 @@
         <h3 style="transform: translate( -21%)">💝 <i>Танін Гуцул</i></h3>
     </div>
 
+    <div class="inner-lo">
+        <ul id="interests-webticker">
+
+            <li data-update="DDD">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Domain-driven_design')">
+                    Domain Driven Design (DDD)
+                </a>
+            </li>
+
+            <li data-update="Eventstorming">
+                <a href="" target="_blank" onclick="window.open('https://www.eventstorming.com/')">
+                    Eventstorming
+                </a>
+            </li>
+
+            <li data-update="ArchiMate">
+                <a href="" target="_blank" onclick="window.open('https://www.opengroup.org/archimate-forum')">
+                    ArchiMate®
+                </a>
+            </li>
+
+            <li data-update="Champion">
+                <a href="" target="_blank" onclick="window.open('https://www.asei.systems/ase-methods')">
+                    The Champion Model®
+                </a>
+            </li>
+
+            <li data-update="GoF">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Design_Patterns')">
+                    Design Patterns (GoF)
+                </a>
+            </li>
+
+            <li data-update="SOLID">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/SOLID')">
+                    SOLID
+                </a>
+            </li>
+
+            <li data-update="GRASP">
+                <a href="" target="_blank"
+                   onclick="window.open('https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)')">
+                    GRASP
+                </a>
+            </li>
+
+            <li data-update="Yagni">
+                <a href="" target="_blank" onclick="window.open('https://martinfowler.com/bliki/Yagni.html')">
+                    Yagni
+                </a>
+            </li>
+
+            <li data-update="ED">
+                <a href="" target="_blank"
+                   onclick="window.open('https://martinfowler.com/articles/201701-event-driven.html')">
+                    <b><i>Event-Driven (ED) Architecture</i></b>
+                </a>
+            </li>
+
+            <li data-update="Clean-Architecture">
+                <a href="" target="_blank"
+                   onclick="window.open('https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html')">
+                    Clean Architecture
+                </a>
+            </li>
+
+            <li data-update="Agile">
+                <a href="" target="_blank" onclick="window.open('https://agilemanifesto.org/')">
+                    Agile Manifesto
+                </a>
+            </li>
+
+            <li data-update="XP">
+                <a href="" target="_blank" onclick="window.open('https://www.agilealliance.org/glossary/xp')">
+                    Extreme Programming (XP)
+                </a>
+            </li>
+
+            <li data-update="BDD">
+                <a href="" target="_blank" onclick="window.open('https://www.agilealliance.org/glossary/bdd/')">
+                    Behavior Driven Development (BDD)
+                </a>
+            </li>
+
+            <li data-update="TDD">
+                <a href="" target="_blank" onclick="window.open('https://www.agilealliance.org/glossary/tdd')">
+                    Test-driven Development (TDD)
+                </a>
+            </li>
+
+            <li data-update="Clean-Code">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Robert_C._Martin')">
+                    Clean Code
+                </a>
+            </li>
+
+            <li data-update="12-factor">
+                <a href="" target="_blank" onclick="window.open('https://12factor.net/')">
+                    The Twelve-Factor App
+                </a>
+            </li>
+
+            <li data-update="distributed">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Distributed_computing')">
+                    Principles of Distributed Computing
+                </a>
+            </li>
+
+            <li data-update="culture">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Hacker_culture')">
+                    <b><i>Hacker Culture (MIT)</i></b>
+                </a>
+            </li>
+
+            <li data-update="Kotlin">
+                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/')">
+                    <b>Kotlin</b>
+                </a>
+            </li>
+
+            <li data-update="Kotlin Server-side">
+                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/lp/server-side/')">
+                    <i>Kotlin Server-side</i>
+                </a>
+            </li>
+
+            <li data-update="Ktor">
+                <a href="" target="_blank" onclick="window.open('https://ktor.io/docs/welcome.html')">
+                    <b>Ktor</b>
+                </a>
+            </li>
+
+            <li data-update="Spring">
+                <a href="" target="_blank"
+                   onclick="window.open('https://spring.getdocs.org/en-US/spring-framework-docs/docs/languages/kotlin/kotlin.html')">
+                    <i>Kotlin Spring</i>
+                </a>
+            </li>
+
+            <li data-update="Quarkus">
+                <a href="" target="_blank" onclick="window.open('https://quarkus.io/guides/kotlin')">
+                    Quarkus - Kotlin
+                </a>
+            </li>
+
+            <li data-update="Jmix">
+                <a href="" target="_blank" onclick="window.open('https://www.jmix.io/kotlin/')">
+                    Jmix - Kotlin (CUBA)
+                </a>
+            </li>
+
+            <li data-update="Kotlin-Web">
+                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/docs/js-overview.html')">
+                    <i>Kotlin Web Frontend</i>
+                </a>
+            </li>
+
+            <li data-update="Kotlin-KMM">
+                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/lp/mobile/')">
+                    <b><i>Kotlin-KMM</i></b>
+                </a>
+            </li>
+
+            <li data-update="Kotest">
+                <a href="" target="_blank" onclick="window.open('https://kotest.io/')">
+                    <b><i>Kotest</i></b>
+                </a>
+            </li>
+
+            <li data-update="Scala">
+                <a href="" target="_blank" onclick="window.open('https://dotty.epfl.ch/')">
+                    Scala
+                </a>
+            </li>
+
+            <li data-update="ScalaTest">
+                <a href="" target="_blank" onclick="window.open('https://www.scalatest.org/')">
+                    ScalaTest™
+                </a>
+            </li>
+
+            <li data-update="Scalactic">
+                <a href="" target="_blank" onclick="window.open('https://www.scalatest.org/release_notes/3.2.11')">
+                    Scalactic™
+                </a>
+            </li>
+
+            <li data-update="Cucumber-Scala">
+                <a href="" target="_blank" onclick="window.open('https://cucumber.io/docs/installation/scala/')">
+                    Cucumber - Scala
+                </a>
+            </li>
+
+            <li data-update="Cucumber">
+                <a href="" target="_blank" onclick="window.open('https://github.com/cucumber')">
+                    Cucumber
+                </a>
+            </li>
+
+            <li data-update="Spock">
+                <a href="" target="_blank" onclick="window.open('https://github.com/spockframework/spock')">
+                    Spock
+                </a>
+            </li>
+
+            <li data-update="Selenium">
+                <a href="" target="_blank" onclick="window.open('https://github.com/SeleniumHQ/selenium')">
+                    Selenium
+                </a>
+            </li>
+
+            <li data-update="Testcontainers">
+                <a href="" target="_blank" onclick="window.open('https://github.com/testcontainers')">
+                    Testcontainers
+                </a>
+            </li>
+
+            <li data-update="Akka">
+                <a href="" target="_blank" onclick="window.open('https://akka.io/')">
+                    Lightbend Akka
+                </a>
+            </li>
+
+            <li data-update="JHipster">
+                <a href="" target="_blank" onclick="window.open('https://www.jhipster.tech/')">JHipster</a>
+            </li>
+
+            <li data-update="Java">
+                <a href="" target="_blank" onclick="window.open('https://docs.oracle.com/javase/specs/')">
+                    <b><i>Java</i></b>
+                </a>
+            </li>
+
+            <li data-update="Groovy">
+                <a href="" target="_blank" onclick="window.open('https://groovy-lang.org/')">
+                    Groovy
+                </a>
+            </li>
+
+            <li data-update="TS">
+                <a href="" target="_blank" onclick="window.open('https://www.typescriptlang.org/')">
+                    TypeScript
+                </a>
+            </li>
+
+            <li data-update="React">
+                <a href="" target="_blank" onclick="window.open('https://react.dev/')">
+                    <b><i>React</i></b>
+                </a>
+            </li>
+
+            <li data-update="Redux">
+                <a href="" target="_blank" onclick="window.open('https://redux.js.org/')">
+                    Redux
+                </a>
+            </li>
+
+            <li data-update="Microservices">
+                <a href="" target="_blank" onclick="window.open('https://microservices.io/')">Microservices</a>
+            </li>
+
+            <li data-update="MicroFrontends">
+                <a href="" target="_blank" onclick="window.open('https://micro-frontends.org/')">MicroFrontends</a>
+            </li>
+
+            <li data-update="HATEOAS">
+                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/HATEOAS')">Hypermedia
+                    (HATEOAS)</a>
+            </li>
+
+            <li data-update="Gradle">
+                <a href="" target="_blank" onclick="window.open('https://gradle.org/')">Gradle</a>
+            </li>
+
+            <li data-update="sbt">
+                <a href="" target="_blank" onclick="window.open('https://www.scala-sbt.org/')">sbt</a>
+            </li>
+
+            <li data-update=""><a href="" target="_blank" onclick="window.open('https://community.auth0.com/')">okta</a>
+            </li>
+            <li data-update="kafa"><a href="" target="_blank"
+                                      onclick="window.open('https://kafka.apache.org/')">kafka</a></li>
+
+            <li data-update="swagger"><a href="" target="_blank"
+                                         onclick="window.open('https://swagger.io/specification/')">OpenAPI /
+                Swagger</a></li>
+            <li data-update="restdocs"><a href="" target="_blank"
+                                          onclick="window.open('https://docs.spring.io/spring-restdocs/docs/current/reference/htmlsingle/')">Spring
+                REST Docs</a></li>
+
+            <li data-update="GCP"><a href="" target="_blank"
+                                     onclick="window.open('https://en.wikipedia.org/wiki/Google_Cloud_Platform')">GCP</a>
+            </li>
+            <li data-update="openshift"><a href="" target="_blank"
+                                           onclick="window.open('https://cloud.redhat.com/learn/what-is-openshift')">OpenShift</a>
+            </li>
+            <li data-update="AWS"><a href="" target="_blank"
+                                     onclick="window.open('https://en.wikipedia.org/wiki/Amazon_Web_Services')">AWS</a>
+            </li>
+
+            <li data-update="Kubernetes">
+                <a href="" target="_blank" onclick="window.open('https://kubernetes.io/')">
+                    Kubernetes
+                </a>
+            </li>
+
+            <li data-update="Docker">
+                <a href="" target="_blank" onclick="window.open('https://www.docker.com/')">
+                    Docker
+                </a>
+            </li>
+
+            <li data-update="Linux">
+                <a href="" target="_blank" onclick="window.open('https://distrowatch.com/')">
+                    Linux
+                </a>
+            </li>
+
+            <li data-update="ZSH"><a href="" target="_blank" onclick="window.open('https://ohmyz.sh/')">ZSH</a></li>
+
+        </ul>
+    </div>
+
 </div>
+
+
+<script>
+    $("#interests-webticker").webTicker({
+        height: '100px',
+        speed: 80,
+        startEmpty: false
+    });
+</script>
 
 <script>
     if ('addEventListener' in window) {
@@ -102,7 +426,7 @@
         document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 
         window.addEventListener("click", function () {
-            window.location.href="https://rdd13r.github.io/rdd13r/"
+            window.location.href = "https://rdd13r.github.io/rdd13r/"
         })
     }
 </script>
