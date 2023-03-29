@@ -20,13 +20,12 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/rdd13r.css">
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="css/rdd13r.css" type="text/css">
+    <!-- CSS: Inline
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <style>
-
         .bg {
             background-size: cover;
             background-position: center;
@@ -38,22 +37,28 @@
             height: 100%;
             vertical-align: middle;
         }
-
     </style>
-    <script type="text/javascript" src="//use.typekit.net/nxs1qix.js"></script>
-    <script type="text/javascript">try {
+
+    <!-- JS: Load Typekit
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" rel="script" src="//use.typekit.net/nxs1qix.js"></script>
+    <script type="text/javascript" rel="script">try {
         Typekit.load();
     } catch (e) {
     }</script>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.webticker.min.js"></script>
+    <!-- JS: Load WebTicker
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" rel="script"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" rel="script" src="scripts/jquery.webticker.min.js"></script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/ico" href="images/favicon.ico">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT5NJ86878"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -81,6 +86,13 @@
         <h1 style="transform: translate( -11%)">💛 Coach</h1>
         <h2 style="transform: translate( -19%)">&amp;</h2>
         <h3 style="transform: translate( -21%)">💝 <i>Танін Гуцул</i></h3>
+    </div>
+
+    <div id="dvCountDown" class="inner" style="font-size: large; display: none; transform: translate(-40%, -50%);">
+        Going to <b><i>Pages</i></b> in <span id="lblCount" style="font-size: x-large"></span>&nbsp;seconds or click
+        ---> for
+        <a href="https://github.com/rdd13r">GitHub</a>
+        <p></p>
     </div>
 
     <div class="inner-lo">
@@ -408,26 +420,34 @@
 
 </div>
 
+<!-- In-Page Actions
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <script>
-    $("#interests-webticker").webTicker({
+    const ticker = $("#interests-webticker");
+
+    ticker.webTicker({
         height: '100px',
         speed: 80,
         startEmpty: false
     });
 </script>
 
+<!-- JS: Profile redirects and click traps
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script type="text/javascript" rel="script" src="scripts/rdd13r.js"></script>
+<script type="text/javascript" rel="script">
+    bootstrapRedirectCountdown();
+
+</script>
+
+
 <script>
     if ('addEventListener' in window) {
-
-        window.addEventListener('load', function () {
-            document.body.className = document.body.className.replace(/\bis-preload\b/, '');
-        });
+        window.addEventListener('load', () => document.body.className = document.body.className.replace(/\bis-preload\b/, ''));
         document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 
-        window.addEventListener("click", function () {
-            window.location.href = "https://rdd13r.github.io/rdd13r/"
-        })
+        window.addEventListener("click", () => trapClickAction())
     }
 </script>
 
