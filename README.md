@@ -2,4 +2,4 @@
 > Riddler's landing page
 
 The purpose of this page is _web landing_ for R!dd13r [(rdd13r) personal profile](https://rdd13r.github.io/rdd13r/ "🇺🇸R!dd13r💙💛") home @ [rdd13r.github.io](https://rdd13r.github.io/ "R!dd13r(rdd13r)").
-See [ASE Inc.](https://www.asei.systems/ "Leadership is a choice ... and so is obsolescence!") to learn more.
+To learn more about what I do please see [ASE Inc.](https://www.asei.systems/ "Leadership is a choice ... and so is obsolescence!"), a consultancy and software company my partner and I operate.
