@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Social Media Bindings
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://me.dm/@rdd13r" rel="me">
+    <link href="https://medium.com/@rdd13r" rel="me">
+    <link href="https://twitter.com/rdd13r" rel="me">
+    <link href="https://www.asei.systems/rdd13r-tech-fa2fa5" rel="me">
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
     <title>Vadim Kuhay - The Consultant Who Predicted the AI Integration Crisis</title>
+    <meta name="robots" content="noindex">
     <meta name="description" content="While everyone else was hyping AI, I documented exactly why most enterprise implementations would fail. I was right. Let me help you recover.">
+    <meta name="author" content="Vadim Kuhay">
 
-    <!-- CSS Framework -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="skeleton.css">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Custom Styles -->
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS: Inline
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <style>
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; margin: 0; }
+
+        /* Container Grid */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .row { display: flex; flex-wrap: wrap; margin: 0 -10px; }
+        .twelve.columns { flex: 1; padding: 0 10px; }
+
         body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: white;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            font-family: "Raleway", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
+            font-size: 16px;
         }
 
         .hero {
@@ -24,58 +49,73 @@
             display: flex;
             align-items: center;
             text-align: center;
-            padding: 2rem 0;
+            padding: 4rem 0;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 300;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .prediction-quote {
-            background: rgba(255,255,255,0.1);
-            border-left: 4px solid #ffd700;
-            padding: 2rem;
-            margin: 3rem 0;
+            background: rgba(255,255,255,0.08);
+            border-left: 4px solid #f39c12;
+            padding: 2.5rem;
+            margin: 3rem auto;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border-radius: 8px;
+            max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .credentials {
-            background: rgba(255,255,255,0.05);
-            padding: 3rem 0;
-            margin: 3rem 0;
+            background: rgba(255,255,255,0.03);
+            padding: 4rem 0;
+            margin: 4rem 0;
             border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
         }
 
         .tech-category {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
+            background: rgba(255,255,255,0.08);
+            padding: 2rem;
             border-radius: 8px;
             text-align: left;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tech-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
 
         .tech-category h4 {
-            color: #ffd700;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            color: #f39c12;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
         .tech-list {
@@ -85,122 +125,159 @@
         }
 
         .tech-list li {
-            padding: 0.3rem 0;
-            font-size: 0.9rem;
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
             opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
         }
 
         .cta-section {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.4);
             padding: 4rem 0;
-            margin: 3rem 0;
+            margin: 4rem 0;
             border-radius: 12px;
             text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 6px;
             display: inline-block;
-            margin: 0.5rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin: 0.8rem;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            box-shadow: 0 4px 15px rgba(231,76,60,0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255,107,107,0.3);
+            box-shadow: 0 8px 25px rgba(231,76,60,0.4);
             color: white;
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid rgba(255,255,255,0.5);
-            padding: 1rem 2rem;
+            border: 2px solid rgba(255,255,255,0.6);
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
             text-decoration: none;
             border-radius: 6px;
             display: inline-block;
-            margin: 0.5rem;
-            transition: all 0.2s ease;
+            margin: 0.8rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .btn-secondary:hover {
             background: rgba(255,255,255,0.1);
             border-color: white;
             color: white;
+            transform: translateY(-1px);
         }
 
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 4rem 0;
             text-align: center;
         }
 
         .stat {
             padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            color: #ffd700;
+            color: #f39c12;
             display: block;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .stat-label {
             font-size: 1rem;
             opacity: 0.8;
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
+            font-weight: 500;
         }
 
         .footer {
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
             opacity: 0.7;
             font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .ai-crisis-badge {
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            color: #1e3c72;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: #1a1a2e;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
             font-weight: 600;
             font-size: 0.9rem;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(243,156,18,0.3);
         }
 
-        @media (max-width: 550px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero h2 { font-size: 1.4rem; }
+            .prediction-quote { padding: 2rem; margin: 2rem auto; font-size: 1rem; }
+            .tech-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .stat { padding: 1.5rem; }
+            .stat-number { font-size: 2.2rem; }
+            .btn-primary, .btn-secondary { display: block; margin: 0.5rem auto; max-width: 280px; }
+        }
 
-            .hero h2 {
-                font-size: 1.4rem;
-            }
-
-            .tech-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 480px) {
+            .stats { grid-template-columns: 1fr; }
         }
     </style>
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+
+    <!-- Global site tag (gtag.js) - Google Analytics
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT5NJ86878"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-FT5NJ86878');
+    </script>
+
 </head>
 <body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <div class="hero">
     <div class="container">
@@ -251,7 +328,7 @@
 
                 <div class="tech-grid">
                     <div class="tech-category">
-                        <h4>🏗️ Architecture Patterns</h4>
+                        <h4>Architecture Patterns</h4>
                         <ul class="tech-list">
                             <li>Domain Driven Design (DDD)</li>
                             <li>Event-Driven Architecture</li>
@@ -262,7 +339,7 @@
                     </div>
 
                     <div class="tech-category">
-                        <h4>🤖 AI Integration</h4>
+                        <h4>AI Integration</h4>
                         <ul class="tech-list">
                             <li>LLM Context Management</li>
                             <li>AI-Ready System Design</li>
@@ -273,7 +350,7 @@
                     </div>
 
                     <div class="tech-category">
-                        <h4>⚡ Enterprise Tech</h4>
+                        <h4>Enterprise Technology</h4>
                         <ul class="tech-list">
                             <li>Kotlin • Scala • Java</li>
                             <li>Spring • Ktor • Quarkus</li>
@@ -284,7 +361,7 @@
                     </div>
 
                     <div class="tech-category">
-                        <h4>🎯 Methodologies</h4>
+                        <h4>Development Methodologies</h4>
                         <ul class="tech-list">
                             <li>Extreme Programming (XP)</li>
                             <li>Test-Driven Development</li>
@@ -324,9 +401,9 @@
             <div class="twelve columns">
                 <p><strong>Vadim Kuhay</strong> • Founder, Advanced Software Enterprises Inc.</p>
                 <p>
-                    <a href="mailto:vadim@asei.systems" style="color: #ffd700;">vadim@asei.systems</a> •
-                    <a href="https://linkedin.com/in/vadim-kuhay" style="color: #ffd700;">LinkedIn</a> •
-                    <a href="https://github.com/rdd13r" style="color: #ffd700;">GitHub</a>
+                    <a href="mailto:vadim@asei.systems" style="color: #f39c12;">vadim@asei.systems</a> •
+                    <a href="https://linkedin.com/in/vadim-kuhay" style="color: #f39c12;">LinkedIn</a> •
+                    <a href="https://github.com/rdd13r" style="color: #f39c12;">GitHub</a>
                 </p>
                 <p><em>"Architecture is trust. Code is conversation. Velocity comes from clarity."</em></p>
             </div>
@@ -334,5 +411,14 @@
     </div>
 </div>
 
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', () => document.body.className = document.body.className.replace(/\bis-preload\b/, ''));
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
