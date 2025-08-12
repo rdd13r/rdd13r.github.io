@@ -1,463 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Social Media Bindings
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://me.dm/@rdd13r" rel="me">
-    <link href="https://medium.com/@rdd13r" rel="me">
-    <link href="https://twitter.com/rdd13r" rel="me">
-    <link href="https://www.asei.systems/rdd13r-tech-fa2fa5" rel="me">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadim Kuhay - The Consultant Who Predicted the AI Integration Crisis</title>
+    <meta name="description" content="While everyone else was hyping AI, I documented exactly why most enterprise implementations would fail. I was right. Let me help you recover.">
 
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>R!dd13r(rdd13r)</title>
-    <meta name="robots" content="noindex">
-    <meta name="description" content="Landing for rdd13r's welcome site">
-    <meta name="author" content="rdd13r">
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
 
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- FONT
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/skeleton.css" type="text/css">
-    <link rel="stylesheet" href="css/rdd13r.css" type="text/css">
-    <!-- CSS: Inline
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Custom Styles -->
     <style>
-        .bg {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             text-align: center;
-            text-rendering: optimizeLegibility;
-            background-image: url("images/rdd13rz-boss-team-forming-1920-1280.png");
-            height: 100%;
-            vertical-align: middle;
+            padding: 2rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .prediction-quote {
+            background: rgba(255,255,255,0.1);
+            border-left: 4px solid #ffd700;
+            padding: 2rem;
+            margin: 3rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        .credentials {
+            background: rgba(255,255,255,0.05);
+            padding: 3rem 0;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tech-category {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .tech-category h4 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-list li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            background: rgba(0,0,0,0.3);
+            padding: 4rem 0;
+            margin: 3rem 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,107,0.3);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            color: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffd700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .ai-crisis-badge {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #1e3c72;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 550px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-
-    <!-- JS: Load Typekit
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script type="text/javascript" rel="script" src="//use.typekit.net/nxs1qix.js"></script>
-    <script type="text/javascript" rel="script">try {
-        Typekit.load();
-    } catch (e) {
-    }</script>
-
-    <!-- JS: Load WebTicker
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script type="text/javascript" rel="script"
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" rel="script" src="scripts/jquery.webticker.min.js"></script>
-
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/ico" href="images/favicon.ico">
-
-    <!-- Global site tag (gtag.js) - Google Analytics
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FT5NJ86878"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-FT5NJ86878');
-    </script>
-
 </head>
 <body>
 
-<!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="ai-crisis-badge">AI Crisis Predictor • Fortune 500 Architect</div>
 
-<div class="bg">
+                <h1>The Consultant Who Predicted the AI Integration Crisis</h1>
 
-    <div class="inner">
-        <h1 style="transform: translate( -17%)">🇺🇸 Architect</h1>
-        <h1 style="transform: translate( -14%)">💙 Developer</h1>
-        <h1 style="transform: translate( -11%)">💛 Coach</h1>
-        <h2 style="transform: translate( -19%)">&amp;</h2>
-        <h3 style="transform: translate( -21%)">💝 <i>Танін Гуцул</i></h3>
+                <h2>While everyone else was hyping AI in 2022-2023, I documented exactly why most enterprise implementations would fail. I was right.</h2>
+
+                <div class="prediction-quote">
+                    "Most enterprise software wasn't designed. It evolved. Like a coral reef—layers upon layers of legacy systems, vendor solutions, and 'temporary' workarounds that became permanent. You can't AI-enable chaos."
+                    <br><strong>— Vadim Kuhay, July 2023</strong>
+                </div>
+
+                <a href="https://www.asei.systems/contact" class="btn-primary">Schedule Confidential Assessment</a>
+                <a href="https://mimis-gildi.github.io/riddle-me-this/adventures/2025/07/21/ai-for-enterprise.html" class="btn-secondary">Read My 2023 Prediction</a>
+            </div>
+        </div>
     </div>
-
-    <div id="dvCountDown" class="inner" style="font-size: large; display: none; transform: translate(-40%, -50%);">
-        Going to <b><i>Pages</i></b> in <span id="lblCount" style="font-size: x-large"></span>&nbsp;seconds or click
-        ---> for
-        <a href="https://github.com/rdd13r">GitHub</a>
-        <p></p>
-    </div>
-
-    <div class="inner-lo">
-        <ul id="interests-webticker">
-
-            <li data-update="DDD">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Domain-driven_design')">
-                    Domain Driven Design (DDD)
-                </a>
-            </li>
-
-            <li data-update="Eventstorming">
-                <a href="" target="_blank" onclick="window.open('https://www.eventstorming.com/')">
-                    Eventstorming
-                </a>
-            </li>
-
-            <li data-update="ArchiMate">
-                <a href="" target="_blank" onclick="window.open('https://www.opengroup.org/archimate-forum')">
-                    ArchiMate®
-                </a>
-            </li>
-
-            <li data-update="Champion">
-                <a href="" target="_blank" onclick="window.open('https://www.asei.systems/ase-methods')">
-                    The Champion Model®
-                </a>
-            </li>
-
-            <li data-update="GoF">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Design_Patterns')">
-                    Design Patterns (GoF)
-                </a>
-            </li>
-
-            <li data-update="SOLID">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/SOLID')">
-                    SOLID
-                </a>
-            </li>
-
-            <li data-update="GRASP">
-                <a href="" target="_blank"
-                   onclick="window.open('https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)')">
-                    GRASP
-                </a>
-            </li>
-
-            <li data-update="Yagni">
-                <a href="" target="_blank" onclick="window.open('https://martinfowler.com/bliki/Yagni.html')">
-                    Yagni
-                </a>
-            </li>
-
-            <li data-update="ED">
-                <a href="" target="_blank"
-                   onclick="window.open('https://martinfowler.com/articles/201701-event-driven.html')">
-                    <b><i>Event-Driven (ED) Architecture</i></b>
-                </a>
-            </li>
-
-            <li data-update="Clean-Architecture">
-                <a href="" target="_blank"
-                   onclick="window.open('https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html')">
-                    Clean Architecture
-                </a>
-            </li>
-
-            <li data-update="Agile">
-                <a href="" target="_blank" onclick="window.open('https://agilemanifesto.org/')">
-                    Agile Manifesto
-                </a>
-            </li>
-
-            <li data-update="XP">
-                <a href="" target="_blank" onclick="window.open('https://www.agilealliance.org/glossary/xp')">
-                    Extreme Programming (XP)
-                </a>
-            </li>
-
-            <li data-update="BDD">
-                <a href="" target="_blank" onclick="window.open('https://www.agilealliance.org/glossary/bdd/')">
-                    Behavior Driven Development (BDD)
-                </a>
-            </li>
-
-            <li data-update="TDD">
-                <a href="" target="_blank" onclick="window.open('https://www.agilealliance.org/glossary/tdd')">
-                    Test-driven Development (TDD)
-                </a>
-            </li>
-
-            <li data-update="Clean-Code">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Robert_C._Martin')">
-                    Clean Code
-                </a>
-            </li>
-
-            <li data-update="12-factor">
-                <a href="" target="_blank" onclick="window.open('https://12factor.net/')">
-                    The Twelve-Factor App
-                </a>
-            </li>
-
-            <li data-update="distributed">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Distributed_computing')">
-                    Principles of Distributed Computing
-                </a>
-            </li>
-
-            <li data-update="culture">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/Hacker_culture')">
-                    <b><i>Hacker Culture (MIT)</i></b>
-                </a>
-            </li>
-
-            <li data-update="Kotlin">
-                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/')">
-                    <b>Kotlin</b>
-                </a>
-            </li>
-
-            <li data-update="Kotlin Server-side">
-                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/lp/server-side/')">
-                    <i>Kotlin Server-side</i>
-                </a>
-            </li>
-
-            <li data-update="Ktor">
-                <a href="" target="_blank" onclick="window.open('https://ktor.io/docs/welcome.html')">
-                    <b>Ktor</b>
-                </a>
-            </li>
-
-            <li data-update="Spring">
-                <a href="" target="_blank"
-                   onclick="window.open('https://spring.getdocs.org/en-US/spring-framework-docs/docs/languages/kotlin/kotlin.html')">
-                    <i>Kotlin Spring</i>
-                </a>
-            </li>
-
-            <li data-update="Quarkus">
-                <a href="" target="_blank" onclick="window.open('https://quarkus.io/guides/kotlin')">
-                    Quarkus - Kotlin
-                </a>
-            </li>
-
-            <li data-update="Jmix">
-                <a href="" target="_blank" onclick="window.open('https://www.jmix.io/kotlin/')">
-                    Jmix - Kotlin (CUBA)
-                </a>
-            </li>
-
-            <li data-update="Kotlin-Web">
-                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/docs/js-overview.html')">
-                    <i>Kotlin Web Frontend</i>
-                </a>
-            </li>
-
-            <li data-update="Kotlin-KMM">
-                <a href="" target="_blank" onclick="window.open('https://kotlinlang.org/lp/mobile/')">
-                    <b><i>Kotlin-KMM</i></b>
-                </a>
-            </li>
-
-            <li data-update="Kotest">
-                <a href="" target="_blank" onclick="window.open('https://kotest.io/')">
-                    <b><i>Kotest</i></b>
-                </a>
-            </li>
-
-            <li data-update="Scala">
-                <a href="" target="_blank" onclick="window.open('https://dotty.epfl.ch/')">
-                    Scala
-                </a>
-            </li>
-
-            <li data-update="ScalaTest">
-                <a href="" target="_blank" onclick="window.open('https://www.scalatest.org/')">
-                    ScalaTest™
-                </a>
-            </li>
-
-            <li data-update="Scalactic">
-                <a href="" target="_blank" onclick="window.open('https://www.scalatest.org/release_notes/3.2.11')">
-                    Scalactic™
-                </a>
-            </li>
-
-            <li data-update="Cucumber-Scala">
-                <a href="" target="_blank" onclick="window.open('https://cucumber.io/docs/installation/scala/')">
-                    Cucumber - Scala
-                </a>
-            </li>
-
-            <li data-update="Cucumber">
-                <a href="" target="_blank" onclick="window.open('https://github.com/cucumber')">
-                    Cucumber
-                </a>
-            </li>
-
-            <li data-update="Spock">
-                <a href="" target="_blank" onclick="window.open('https://github.com/spockframework/spock')">
-                    Spock
-                </a>
-            </li>
-
-            <li data-update="Selenium">
-                <a href="" target="_blank" onclick="window.open('https://github.com/SeleniumHQ/selenium')">
-                    Selenium
-                </a>
-            </li>
-
-            <li data-update="Testcontainers">
-                <a href="" target="_blank" onclick="window.open('https://github.com/testcontainers')">
-                    Testcontainers
-                </a>
-            </li>
-
-            <li data-update="Akka">
-                <a href="" target="_blank" onclick="window.open('https://akka.io/')">
-                    Lightbend Akka
-                </a>
-            </li>
-
-            <li data-update="JHipster">
-                <a href="" target="_blank" onclick="window.open('https://www.jhipster.tech/')">JHipster</a>
-            </li>
-
-            <li data-update="Java">
-                <a href="" target="_blank" onclick="window.open('https://docs.oracle.com/javase/specs/')">
-                    <b><i>Java</i></b>
-                </a>
-            </li>
-
-            <li data-update="Groovy">
-                <a href="" target="_blank" onclick="window.open('https://groovy-lang.org/')">
-                    Groovy
-                </a>
-            </li>
-
-            <li data-update="TS">
-                <a href="" target="_blank" onclick="window.open('https://www.typescriptlang.org/')">
-                    TypeScript
-                </a>
-            </li>
-
-            <li data-update="React">
-                <a href="" target="_blank" onclick="window.open('https://react.dev/')">
-                    <b><i>React</i></b>
-                </a>
-            </li>
-
-            <li data-update="Redux">
-                <a href="" target="_blank" onclick="window.open('https://redux.js.org/')">
-                    Redux
-                </a>
-            </li>
-
-            <li data-update="Microservices">
-                <a href="" target="_blank" onclick="window.open('https://microservices.io/')">Microservices</a>
-            </li>
-
-            <li data-update="MicroFrontends">
-                <a href="" target="_blank" onclick="window.open('https://micro-frontends.org/')">MicroFrontends</a>
-            </li>
-
-            <li data-update="HATEOAS">
-                <a href="" target="_blank" onclick="window.open('https://en.wikipedia.org/wiki/HATEOAS')">Hypermedia
-                    (HATEOAS)</a>
-            </li>
-
-            <li data-update="Gradle">
-                <a href="" target="_blank" onclick="window.open('https://gradle.org/')">Gradle</a>
-            </li>
-
-            <li data-update="sbt">
-                <a href="" target="_blank" onclick="window.open('https://www.scala-sbt.org/')">sbt</a>
-            </li>
-
-            <li data-update=""><a href="" target="_blank" onclick="window.open('https://community.auth0.com/')">okta</a>
-            </li>
-            <li data-update="kafa"><a href="" target="_blank"
-                                      onclick="window.open('https://kafka.apache.org/')">kafka</a></li>
-
-            <li data-update="swagger"><a href="" target="_blank"
-                                         onclick="window.open('https://swagger.io/specification/')">OpenAPI /
-                Swagger</a></li>
-            <li data-update="restdocs"><a href="" target="_blank"
-                                          onclick="window.open('https://docs.spring.io/spring-restdocs/docs/current/reference/htmlsingle/')">Spring
-                REST Docs</a></li>
-
-            <li data-update="GCP"><a href="" target="_blank"
-                                     onclick="window.open('https://en.wikipedia.org/wiki/Google_Cloud_Platform')">GCP</a>
-            </li>
-            <li data-update="openshift"><a href="" target="_blank"
-                                           onclick="window.open('https://cloud.redhat.com/learn/what-is-openshift')">OpenShift</a>
-            </li>
-            <li data-update="AWS"><a href="" target="_blank"
-                                     onclick="window.open('https://en.wikipedia.org/wiki/Amazon_Web_Services')">AWS</a>
-            </li>
-
-            <li data-update="Kubernetes">
-                <a href="" target="_blank" onclick="window.open('https://kubernetes.io/')">
-                    Kubernetes
-                </a>
-            </li>
-
-            <li data-update="Docker">
-                <a href="" target="_blank" onclick="window.open('https://www.docker.com/')">
-                    Docker
-                </a>
-            </li>
-
-            <li data-update="Linux">
-                <a href="" target="_blank" onclick="window.open('https://distrowatch.com/')">
-                    Linux
-                </a>
-            </li>
-
-            <li data-update="ZSH"><a href="" target="_blank" onclick="window.open('https://ohmyz.sh/')">ZSH</a></li>
-
-        </ul>
-    </div>
-
 </div>
 
-<!-- In-Page Actions
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+    <div class="stats">
+        <div class="stat">
+            <span class="stat-number">25+</span>
+            <div class="stat-label">Years Architecture Experience</div>
+        </div>
+        <div class="stat">
+            <span class="stat-number">34</span>
+            <div class="stat-label">Enterprise Transformations</div>
+        </div>
+        <div class="stat">
+            <span class="stat-number">80%</span>
+            <div class="stat-label">AI Failure Rate I Predicted</div>
+        </div>
+        <div class="stat">
+            <span class="stat-number">2016</span>
+            <div class="stat-label">Started Building AI-Augmented Systems</div>
+        </div>
+    </div>
 
-<script>
-    const ticker = $("#interests-webticker");
+    <div class="credentials">
+        <div class="row">
+            <div class="twelve columns">
+                <h3 style="text-align: center; margin-bottom: 3rem;">Technical Foundation That Enables AI Success</h3>
 
-    ticker.webTicker({
-        height: '100px',
-        speed: 80,
-        startEmpty: false
-    });
-</script>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h4>🏗️ Architecture Patterns</h4>
+                        <ul class="tech-list">
+                            <li>Domain Driven Design (DDD)</li>
+                            <li>Event-Driven Architecture</li>
+                            <li>Clean Architecture</li>
+                            <li>Microservices & Boundaries</li>
+                            <li>Model Context Protocol (MCP)</li>
+                        </ul>
+                    </div>
 
-<!-- JS: Profile redirects and click traps
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script type="text/javascript" rel="script" src="scripts/rdd13r.js"></script>
-<script type="text/javascript" rel="script">
-    bootstrapRedirectCountdown();
+                    <div class="tech-category">
+                        <h4>🤖 AI Integration</h4>
+                        <ul class="tech-list">
+                            <li>LLM Context Management</li>
+                            <li>AI-Ready System Design</li>
+                            <li>Anti-Corruption Layers</li>
+                            <li>Bounded Context AI</li>
+                            <li>ML-Augmented Aggregates</li>
+                        </ul>
+                    </div>
 
-</script>
+                    <div class="tech-category">
+                        <h4>⚡ Enterprise Tech</h4>
+                        <ul class="tech-list">
+                            <li>Kotlin • Scala • Java</li>
+                            <li>Spring • Ktor • Quarkus</li>
+                            <li>Kafka • Event Sourcing</li>
+                            <li>Kubernetes • Docker</li>
+                            <li>GCP • AWS • OpenShift</li>
+                        </ul>
+                    </div>
 
+                    <div class="tech-category">
+                        <h4>🎯 Methodologies</h4>
+                        <ul class="tech-list">
+                            <li>Extreme Programming (XP)</li>
+                            <li>Test-Driven Development</li>
+                            <li>Behavior-Driven Development</li>
+                            <li>EventStorming Facilitation</li>
+                            <li>Team Coaching & Mentoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script>
-    if ('addEventListener' in window) {
-        window.addEventListener('load', () => document.body.className = document.body.className.replace(/\bis-preload\b/, ''));
-        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    <div class="cta-section">
+        <div class="row">
+            <div class="twelve columns">
+                <h3>Stop Letting AI Failures Define Your Leadership</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Ready to understand what really went wrong? Our confidential Architecture Assessment reveals exactly why your AI failed and provides a clear path to success.
+                </p>
 
-        window.addEventListener("click", () => trapClickAction())
-    }
-</script>
+                <p style="margin-bottom: 2rem;">
+                    ✓ Completely confidential process<br>
+                    ✓ Clear diagnosis of what went wrong<br>
+                    ✓ Roadmap to actual success<br>
+                    ✓ No vendor pitches, just truth
+                </p>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+                <a href="https://www.asei.systems/contact" class="btn-primary">Schedule Confidential Assessment</a>
+                <a href="https://www.asei.systems" class="btn-secondary">Learn About ASE Inc</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="twelve columns">
+                <p><strong>Vadim Kuhay</strong> • Founder, Advanced Software Enterprises Inc.</p>
+                <p>
+                    <a href="mailto:vadim@asei.systems" style="color: #ffd700;">vadim@asei.systems</a> •
+                    <a href="https://linkedin.com/in/vadim-kuhay" style="color: #ffd700;">LinkedIn</a> •
+                    <a href="https://github.com/rdd13r" style="color: #ffd700;">GitHub</a>
+                </p>
+                <p><em>"Architecture is trust. Code is conversation. Velocity comes from clarity."</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
