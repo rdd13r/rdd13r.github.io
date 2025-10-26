@@ -1,8 +1,9 @@
 # rdd13r.github.io
-> Vadim Kuhay - AI Architecture Consultant Landing Page
 
-Professional landing page for Vadim Kuhay, the consultant who predicted the AI integration crisis.
+Landing page for [Vadim Kuhay](https://rdd13r.github.io/rdd13r/),
+the architect who fixes your failed AI nightmare.
+He predicted this AI integration crisis long ago.
 
-Showcases enterprise architecture expertise and drives business inquiries for Advanced Software Enterprises Inc.
+Seek him out at [Advanced Software Enterprises Inc](https://www.asei.systems).
 
-Live at: https://rdd13r.github.io
+**Live:** https://rdd13r.github.io

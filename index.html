@@ -11,9 +11,10 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Vadim Kuhay - The Consultant Who Predicted the AI Integration Crisis</title>
+    <title>Vadim Kuhay - I Fix Failed Enterprise AI Implementations</title>
     <meta name="robots" content="noindex">
-    <meta name="description" content="While everyone else was hyping AI, I documented exactly why most enterprise implementations would fail. I was right. Let me help you recover.">
+    <meta name="description"
+          content="Surgical recovery for failed AI initiatives. Not rewrites. Pragmatic fixes that work. Immediate triage, tactical wins, strategic evolution.">
     <meta name="author" content="Vadim Kuhay">
 
     <!-- Mobile Specific Metas
@@ -45,7 +46,7 @@
         }
 
         .hero {
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             text-align: center;
@@ -70,6 +71,15 @@
             margin-right: auto;
         }
 
+        .hero a {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        .hero a:hover {
+            color: #d6c44d;
+        }
+
         .prediction-quote {
             background: rgba(255,255,255,0.08);
             border-left: 4px solid #f39c12;
@@ -82,46 +92,11 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .credentials {
-            background: rgba(255,255,255,0.03);
-            padding: 4rem 0;
-            margin: 4rem 0;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .tech-category {
-            background: rgba(255,255,255,0.08);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: left;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .tech-category:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
         .tech-category h4 {
             color: #f39c12;
             margin-bottom: 1.2rem;
             font-size: 1.2rem;
             font-weight: 600;
-        }
-
-        .tech-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
         }
 
         .tech-list li {
@@ -135,17 +110,8 @@
             border-bottom: none;
         }
 
-        .cta-section {
-            background: rgba(0,0,0,0.4);
-            padding: 4rem 0;
-            margin: 4rem 0;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
         .btn-primary {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            background: linear-gradient(135deg, #0d3a03 0%, #0c6120 100%);
             color: white;
             padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
@@ -187,36 +153,6 @@
             transform: translateY(-1px);
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-            text-align: center;
-        }
-
-        .stat {
-            padding: 2rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .stat-number {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #f39c12;
-            display: block;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.8;
-            margin-top: 0.8rem;
-            font-weight: 500;
-        }
-
         .footer {
             text-align: center;
             padding: 3rem 0;
@@ -224,6 +160,17 @@
             font-size: 0.9rem;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
+
+
+        .footer a {
+            color: #f3b043;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: #e6d562;
+        }
+
 
         .ai-crisis-badge {
             background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
@@ -237,26 +184,44 @@
             box-shadow: 0 4px 15px rgba(243,156,18,0.3);
         }
 
+        .recovery-framework h4 {
+            color: #f39c12;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .recovery-framework ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recovery-framework li {
+            padding: 0.6rem 0 0.6rem 1.5rem;
+            position: relative;
+        }
+
+        .recovery-framework li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
             .hero h1 { font-size: 2.5rem; }
             .hero h2 { font-size: 1.4rem; }
             .prediction-quote { padding: 2rem; margin: 2rem auto; font-size: 1rem; }
-            .tech-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-            .stat { padding: 1.5rem; }
-            .stat-number { font-size: 2.2rem; }
+
             .btn-primary, .btn-secondary { display: block; margin: 0.5rem auto; max-width: 280px; }
         }
 
-        @media (max-width: 480px) {
-            .stats { grid-template-columns: 1fr; }
-        }
     </style>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
 
     <!-- Global site tag (gtag.js) - Google Analytics
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -283,130 +248,43 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns">
-                <div class="ai-crisis-badge">AI Crisis Predictor • Fortune 500 Architect</div>
+                <div class="ai-crisis-badge">Fortune 500 Architect • 25 Years</div>
 
-                <h1>The Consultant Who Predicted the AI Integration Crisis</h1>
+                <h1>I Fix Your Failed AI<br>For good.</h1>
 
-                <h2>While everyone else was hyping AI in 2022-2023, I documented exactly why most enterprise implementations would fail. I was right.</h2>
+                <h2>Not with rewrites, transformations, or other poser tricks.<br>With competent surgical changes. Every time.</h2>
 
                 <div class="prediction-quote">
-                    "Most enterprise software wasn't designed. It evolved. Like a coral reef—layers upon layers of legacy systems, vendor solutions, and 'temporary' workarounds that became permanent. You can't AI-enable chaos."
-                    <br><strong>— Vadim Kuhay, July 2023</strong>
+                    Most enterprise software wasn't designed. It evolved.<br>
+                    Like a coral reef<br>
+                    — layers upon layers of legacy systems, vendor solutions,<br>
+                    and 'temporary' workarounds that became permanent.
+                    <br><br><strong>You can't AI-enable chaos.</strong><br>
+                    <br><strong>— <a href="https://rdd13r.github.io/rdd13r/">Vadim Kuhay</a>, July 2023</strong>
                 </div>
 
-                <a href="https://www.asei.systems/contact" class="btn-primary">Schedule Confidential Assessment</a>
-                <a href="https://mimis-gildi.github.io/riddle-me-this/adventures/2025/07/21/ai-for-enterprise.html" target="_blank" class="btn-secondary">Read My 2023 Prediction</a>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+                    How did I know <a href="https://mimis-gildi.github.io/riddle-me-this/adventures/2023/07/05/integrated-ai-evolution.html" target="_blank">to
+                    predict it</a> years ahead?<br>
+                    Simple: I know YOUR software. Built a lot of it myself.
+                </p>
+
+                <a href="https://asei.systems/diagnostic" class="btn-primary">Get Confidential Assessment</a>
+                <a href="https://asei.systems" class="btn-secondary">Learn About ASE Inc</a>
             </div>
         </div>
     </div>
 </div>
-
-<div class="container">
-    <div class="stats">
-        <div class="stat">
-            <span class="stat-number">25+</span>
-            <div class="stat-label">Years Architecture Experience</div>
-        </div>
-        <div class="stat">
-            <span class="stat-number">34</span>
-            <div class="stat-label">Enterprise Transformations</div>
-        </div>
-        <div class="stat">
-            <span class="stat-number">80%</span>
-            <div class="stat-label">AI Failure Rate I Predicted</div>
-        </div>
-        <div class="stat">
-            <span class="stat-number">2016</span>
-            <div class="stat-label">Started Building AI-Augmented Systems</div>
-        </div>
-    </div>
-
-    <div class="credentials">
-        <div class="row">
-            <div class="twelve columns">
-                <h3 style="text-align: center; margin-bottom: 3rem;">Technical Foundation That Enables AI Success</h3>
-
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <h4>Architecture Patterns</h4>
-                        <ul class="tech-list">
-                            <li>Domain Driven Design (DDD)</li>
-                            <li>Event-Driven Architecture</li>
-                            <li>Clean Architecture</li>
-                            <li>Microservices & Boundaries</li>
-                            <li>Model Context Protocol (MCP)</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-category">
-                        <h4>AI Integration</h4>
-                        <ul class="tech-list">
-                            <li>LLM Context Management</li>
-                            <li>AI-Ready System Design</li>
-                            <li>Anti-Corruption Layers</li>
-                            <li>Bounded Context AI</li>
-                            <li>ML-Augmented Aggregates</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-category">
-                        <h4>Enterprise Technology</h4>
-                        <ul class="tech-list">
-                            <li>Kotlin • Scala • Java</li>
-                            <li>Spring • Ktor • Quarkus</li>
-                            <li>Kafka • Event Sourcing</li>
-                            <li>Kubernetes • Docker</li>
-                            <li>GCP • AWS • OpenShift</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-category">
-                        <h4>Development Methodologies</h4>
-                        <ul class="tech-list">
-                            <li>Extreme Programming (XP)</li>
-                            <li>Test-Driven Development</li>
-                            <li>Behavior-Driven Development</li>
-                            <li>EventStorming Facilitation</li>
-                            <li>Team Coaching & Mentoring</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="cta-section">
-        <div class="row">
-            <div class="twelve columns">
-                <h3>Stop Letting AI Failures Define Your Leadership</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Ready to understand what really went wrong? Our confidential Architecture Assessment reveals exactly why your AI failed and provides a clear path to success.
-                </p>
-
-                <p style="margin-bottom: 2rem;">
-                    ✓ Completely confidential process<br>
-                    ✓ Clear diagnosis of what went wrong<br>
-                    ✓ Roadmap to actual success<br>
-                    ✓ No vendor pitches, just truth
-                </p>
-
-                <a href="https://www.asei.systems/contact" class="btn-primary">Schedule Confidential Assessment</a>
-                <a href="https://www.asei.systems" class="btn-secondary">Learn About ASE Inc</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="row">
-            <div class="twelve columns">
-                <p><strong>Vadim Kuhay</strong> • Founder, Advanced Software Enterprises Inc.</p>
-                <p>
-                    <a href="mailto:vadim@asei.systems" style="color: #f39c12;">vadim@asei.systems</a> •
-                    <a href="https://linkedin.com/in/vadim-kuhay" style="color: #f39c12;">LinkedIn</a> •
-                    <a href="https://github.com/rdd13r" style="color: #f39c12;">GitHub</a>
-                </p>
-                <p><em>"Architecture is trust. Code is conversation. Velocity comes from clarity."</em></p>
-            </div>
+<div class="footer">
+    <div class="row">
+        <div class="twelve columns">
+            <p><strong><a href="https://rdd13r.github.io/rdd13r/">Vadim Kuhay</a></strong> • Founder, Advanced Software Enterprises Inc.</p>
+            <p>
+                <a href="mailto:vadim@asei.systems">vadim@asei.systems</a> •
+                <a href="https://www.linkedin.com/in/rdd13r/">LinkedIn</a> •
+                <a href="https://github.com/Mimis-Gildi">GitHub</a>
+            </p>
+            <p><em>Architecture is trust. Code is conversation. Velocity comes from clarity.</em></p>
         </div>
     </div>
 </div>
